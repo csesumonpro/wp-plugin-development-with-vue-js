@@ -1,10 +1,12 @@
 <?php
 
+namespace WPVideoPlayer;
+use WPVideoPlayer\Hooks\Handlers\Activation;
+
 class Application
 {
 	public function init()
 	{
-		var_dump('init');
-		exit();
+		(new Activation)->handle();
 	}
 }

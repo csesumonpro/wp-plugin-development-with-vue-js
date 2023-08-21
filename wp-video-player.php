@@ -15,8 +15,8 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 // Exit if accessed directly
 
-include_once 'app/Application.php';
+require_once __DIR__ . '/vendor/autoload.php';
 
 add_action('plugins_loaded', function () {
-	(new Application)->init();
+	(new WPVideoPlayer\Application)->init();
 });
